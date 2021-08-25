@@ -10,6 +10,9 @@ namespace FileMonitorHook
     [Serializable]
     public class Key : IComparable<Key>
     {
+
+        public static implicit operator Keys(Key k) => Keys.get(k);
+
         Key() { }
         public readonly static Key Triangle = new Key(5, 7, "Triangle", "Shape");
         public readonly static Key Square = new Key(5, 4, "Square", "Shape");
